@@ -9,7 +9,7 @@ for (let i = 0; wordL.length > i; i++) {
     wordUnderlined += '_ ';
 }
 
-$('#card').append(`<h4>${wordUnderlined}</h4>`);
+$('#word').html(`${wordUnderlined}`);
 
 function check(tried) {
     const triedL = tried.split('');
@@ -24,17 +24,30 @@ function check(tried) {
     return tent;
 }
 
+$('#dica').click(function () {
+    const sorted = Math.floor(Math.random() * word.length);
+    
+    let tent = '';
+    for (let i = 0; i < word.length; i++) {
+        if (i == sorted) {
+            tent += wordL[i] + ' ';
+        } else {
+            tent += '_ ';
+        }
+    }
+});
+
 $('form').submit(function (e) {
     e.preventDefault();
 
     const tried = $('form input').val();
     if (tried.length == word.length) {
         const tent = check(tried);
-        $('#card').append(`<h4>${tent}</h4>`);
+        $('#card').append(`<h3>${tent}</h3>`);
 
 
         if (tent.replace(/ /g, '') == word) {
-            $('#card').append(`<h4>Parabéns, você acertou!</h4>`);
+            $('#card').append(`<h3>Parabéns, você acertou!</h3>`);
         }
     }
 });
