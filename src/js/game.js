@@ -57,6 +57,7 @@ $('form').submit(function (e) {
         if (tent.replace(/ /g, '') == word) {
             $('#card').append(`<h2><i class="fa fa-star" style="margin-right:15px"></i>${tent.trim()}<i class="fa fa-star" style="margin-left:15px"></h2>`);
             $('#card').append(`<h3>Parabéns, você acertou!</h3>`);
+            $('.input').hide();
         }
         $('form input').val('');
     }

@@ -41,7 +41,7 @@ body {
 
 h1 {
     text-align: center;
-    margin: 50px;
+    margin: 30px;
 }
 
 .box-central h3 {
@@ -63,7 +63,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-button {
+#dica {
     margin: 10px;
     padding: 10px;
     background-color: #ffffff00;
@@ -76,7 +76,7 @@ button {
     transition: 0.3s;
 }
 
-button:hover {
+#dica:hover {
     background-color: #e4e4e4;
 }
 
@@ -99,4 +99,8 @@ h2 {
 
 .fa-star {
     font-size: 15px;
+}
+
+p {
+    margin-bottom: 10px;
 }
