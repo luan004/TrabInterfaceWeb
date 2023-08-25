@@ -6,6 +6,7 @@
     <title>Desafio das palavras</title>
     <link rel="stylesheet" href="src/css/style.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script
         src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -13,6 +14,9 @@
     </script>
 </head>
 <body>
+    <div class="h1">
+        <h1>Desafio das palavras</h1>
+    </div>
     <div class="box-central">
         <div id="card" class="card">
             <div>
@@ -22,11 +26,15 @@
         <div class="input">
             <form>
                 <input type="text">
-                <button id="dica">
-                    Dica
-                </button>
             </form>
         </div>
+        <button id="dica">
+            <i class="fa fa-question"></i>
+            Dica
+        </button>
+        <label>
+            <span id="numdica">0</span>/3
+        </label>
     </div>
 
 </body>
